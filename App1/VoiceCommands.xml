@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+
+  <CommandSet xml:lang="en-us" Name="englishCommands">
+    
+    <!--<speak version="1.0"
+      xmlns="http://www.w3.org/2001/10/synthesis"
+       xmlns:sxi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.w3.org/2001/10/synthesis http://www.w3.org/TR/speech-synthesis/synthesis.xsd"
+       xml:lang="en-US"><phoneme alphabet="x-microsoft-ups" ph="MY . NUS">-</phoneme></speak>-->
+
+    <CommandPrefix>Calculator</CommandPrefix>
+    
+    <Example> Calculate two plus two </Example>
+
+    <Command Name="plus">
+      <Example> Calculate 7 plus 3 </Example>
+      <ListenFor> [Calculate] [What is] {number1} plus {number2} </ListenFor>
+      <Feedback> Calculating {number1} plus {number2}... </Feedback>
+      <Navigate />
+    </Command>
+    
+    <Command Name="minus">
+      <Example> Calculate 9 minus 6 </Example>
+      <ListenFor> [Calculate] [What is] {number1} minus {number2} </ListenFor>
+      <Feedback> Calculating {number1} minus {number2}... </Feedback>
+      <Navigate />
+    </Command>
+    
+    <Command Name="times">
+      <Example> Calculate 5 times 4 </Example>
+      <ListenFor> [Calculate] [What is] {number1} times {number2} </ListenFor>
+      <ListenFor> [Calculate] [What is] {number1} multiplied by {number2} </ListenFor>
+      <Feedback> Calculating {number1} times {number2}... </Feedback>
+      <Navigate />
+    </Command>
+    
+    <Command Name="divided by">
+      <Example> Calculate 8 divided by 2 </Example>
+      <ListenFor> [Calculate] [What is] {number1} divided by {number2} </ListenFor>
+      <ListenFor> [Calculate] [What is] {number1} over {number2} </ListenFor>
+      <Feedback> Calculating {number1} divided by {number2}... </Feedback>
+      <Navigate />
+    </Command>
+
+    <PhraseTopic Label="number1" Scenario="Operand">
+      <Subject> Number </Subject>
+    </PhraseTopic>
+    
+  <PhraseTopic Label="number2" Scenario="Operand">
+      <Subject> Number </Subject>
+    </PhraseTopic>
+  
+  <!--
+  <PhraseTopic Label="commandMode" Scenario="Operator">
+      <Subject> Operator </Subject>
+    </PhraseTopic>
+   -->
+
+  </CommandSet>
+</VoiceCommands>
